@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Consultar ip</title>
+</head>
+<body>
+<h1>Consult ip</h1>
+
+<form id="formulario">
+  <input type="text" id="ip" placeholder="Igresa ip" required>
+  <button type="submit">Enviar</button>
+</form>
+
+<div id="respuesta"></div>
+
+<script>
+  const formulario = document.getElementById('formulario');
+  const respuesta = document.getElementById('respuesta');
+
+  formulario.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const ip = document.getElementById('ip').value;
+
+      const res = await fetch(`/ip/consult/${encodeURIComponent(ip)}`, {
+          method: 'POST'
+      });
+
+      const texto = await res.text();
+      respuesta.textContent = texto;
+  });
+</script>
+</body>
+</html>

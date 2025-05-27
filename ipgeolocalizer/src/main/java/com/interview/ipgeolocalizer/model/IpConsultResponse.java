@@ -1,15 +1,27 @@
 package com.interview.ipgeolocalizer.model;
 
 public class IpConsultResponse {
-    String country;
-    String countryCode;
-    String timezone;
+    private String country;
+    private String countryCode;
+    private String timezone;
+    private String currency;
+    private String language;
+    private String time;
     long distance;
 
-    public IpConsultResponse(String country, String countryCode, String timezone, long distance) {
+    public IpConsultResponse(String country,
+                             String countryCode,
+                             String timezone,
+                             String currency,
+                             String language,
+                             String time,
+                             long distance) {
         this.country = country;
         this.countryCode = countryCode;
         this.timezone = timezone;
+        this.currency = currency;
+        this.language = language;
+        this.time = time;
         this.distance = distance;
     }
 
@@ -35,6 +47,30 @@ public class IpConsultResponse {
 
     public void setTimezone(String timezone) {
         this.timezone = timezone;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public long getDistance() {
