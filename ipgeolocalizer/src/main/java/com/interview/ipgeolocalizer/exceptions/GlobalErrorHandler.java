@@ -28,4 +28,13 @@ public class GlobalErrorHandler {
         response.put("code",400);
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(NotFoundException.class)
+    public ResponseEntity<Map<String,Object>> cotizationNotAvailableErrorHandler(Exception ex){
+        Map<String,Object> response=new HashMap<>();
+        response.put("Error","Cotization not available");
+        response.put("message",ex.getMessage());
+        response.put("code",404);
+        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+    }
 }
