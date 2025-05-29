@@ -3,7 +3,6 @@ package com.interview.ipgeolocalizer.controller;
 import com.interview.ipgeolocalizer.model.IpConsultResponse;
 import com.interview.ipgeolocalizer.service.CityService;
 import com.interview.ipgeolocalizer.service.CotizationService;
-import com.interview.ipgeolocalizer.utils.MinimumDistanceExporter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
