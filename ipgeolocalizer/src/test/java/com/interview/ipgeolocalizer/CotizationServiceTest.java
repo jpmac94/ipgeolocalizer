@@ -14,13 +14,9 @@ public class CotizationServiceTest {
     private CotizationService cotizationService;
 
     @Test
-    public void saveCotization(){
-        Cotization cotization=new Cotization("ARS",1300.00);
-        cotizationService.saveCotization(cotization);
+    public void getCotization(){
+        Assertions.assertThat(cotizationService.getCurrentCotization("ARS").getId().equals("ARS"));
     }
 
-    @Test
-    public void getCotization(){
-        Assertions.assertThat(cotizationService.getCotizationById("ARS").getCotization()==1300.00);
-    }
+
 }

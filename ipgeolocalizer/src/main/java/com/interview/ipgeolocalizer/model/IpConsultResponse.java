@@ -7,7 +7,16 @@ public class IpConsultResponse {
     private String currency;
     private String language;
     private String time;
-    long distance;
+    private long distance;
+    private double cotization;
+
+    public double getCotization() {
+        return cotization;
+    }
+
+    public void setCotization(double cotization) {
+        this.cotization = cotization;
+    }
 
     public IpConsultResponse(String country,
                              String countryCode,
