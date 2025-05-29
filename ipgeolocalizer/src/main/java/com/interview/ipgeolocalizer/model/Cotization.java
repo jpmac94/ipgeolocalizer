@@ -1,10 +1,12 @@
 package com.interview.ipgeolocalizer.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 
 @RedisHash("Cotization")
 public class Cotization {
 
+    @Id
     private String id;
     private double cotization;
 
