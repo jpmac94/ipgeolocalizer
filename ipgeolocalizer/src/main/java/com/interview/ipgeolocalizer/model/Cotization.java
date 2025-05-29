@@ -6,9 +6,9 @@ import org.springframework.data.redis.core.RedisHash;
 public class Cotization {
 
     private String id;
-    private String cotization;
+    private double cotization;
 
-    public Cotization(String id, String cotization) {
+    public Cotization(String id, double cotization) {
         this.id = id;
         this.cotization = cotization;
     }
@@ -21,11 +21,11 @@ public class Cotization {
         this.id = id;
     }
 
-    public String getCotization() {
+    public double getCotization() {
         return cotization;
     }
 
-    public void setCotization(String cotization) {
+    public void setCotization(double cotization) {
         this.cotization = cotization;
     }
 }

@@ -15,12 +15,12 @@ public class CotizationServiceTest {
 
     @Test
     public void saveCotization(){
-        Cotization cotization=new Cotization("ARS","1300");
+        Cotization cotization=new Cotization("ARS",1300.00);
         cotizationService.saveCotization(cotization);
     }
 
     @Test
     public void getCotization(){
-        Assertions.assertThat(cotizationService.getCotizationById("ARS").getCotization()=="1300");
+        Assertions.assertThat(cotizationService.getCotizationById("ARS").getCotization()==1300.00);
     }
 }
